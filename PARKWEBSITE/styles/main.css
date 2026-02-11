@@ -122,6 +122,18 @@ article h2.open-forever{
   background-image: url('../images/open-james-lee.jpg');
 }
 
+.emphasize{
+  border-left: solid 5px #27AE60;
+  box-shadow: #27AE60 1px 0 5px rgba(0, 0, 0, 0.3);
+  padding: 1em;
+  
+  text-align: center;
+}
+
+.emphasize h2{
+  margin: 0px;
+  
+}
 .product{
   margin-right: 1em;
   padding: 1em;
