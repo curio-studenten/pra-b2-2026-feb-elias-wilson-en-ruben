@@ -168,7 +168,21 @@ button{
   height: 64px;
 }
 
-.sidy-by-side{
+.side-by-side {
+  display: flex;
+  gap: 20px;          /* ruimte tussen de opties */
+  justify-content: space-between;
+}
+
+.side-by-side > * {
+  flex: 1;            /* alle opties even breed */
+}
+
+/* Mobiel */
+@media (max-width: 600px) {
+  .side-by-side {
+    flex-direction: column;   /* onder elkaar op mobiel */
+  }
 }
 
 .description{
