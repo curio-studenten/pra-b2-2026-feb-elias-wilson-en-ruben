@@ -36,11 +36,10 @@ header{
   text-align: center;
   background-color: rgba(255, 255, 255, 0.5);
 
-  /* Deze animatie wordt onder aan dit bestand gedefinieerd/aangemaakt */
-  -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 4s; /* Firefox < 16 */
-  -ms-animation: fadein 4s; /* Internet Explorer */
-  -o-animation: fadein 4s; /* Opera < 12.1 */
+  -webkit-animation: fadein 4s;
+  -moz-animation: fadein 4s;
+  -ms-animation: fadein 4s;
+  -o-animation: fadein 4s;
   animation: fadein 4s;
 }
 
@@ -70,6 +69,12 @@ main{
   padding: 1em;
 }
 
+/* ZORGT DAT ELEMENTEN IN .row NAAST ELKAAR STAAN */
+.row{
+  display: flex;
+  gap: 1em;
+}
+
 table{
   margin-top: 1em;
   width: 100%;
@@ -97,6 +102,7 @@ article{
   padding-left: 10px;
   margin: 1em 1em 1em 0;
 }
+
 article:last-of-type{
   margin-right: 0;
 }
@@ -110,15 +116,19 @@ article h2{
   text-align: center;
   text-shadow: 0 0 0 #FCFCFC, -1px -1px 0 #FCFCFC, 1px -1px 0 #FCFCFC, -1px 1px 0 #FCFCFC, 1px 1px 0 #FCFCFC;
 }
+
 article h2.fun-for-family{
   background-image: url('../images/family-fun-george-arthur-pflueger.jpg');
 }
+
 article h2.accessibility{
   background-image: url('../images/accessible-eunice-stahl.jpg');
 }
+
 article h2.rides{
   background-image: url('../images/drone-drew-dau.jpg');
 }
+
 article h2.open-forever{
   background-image: url('../images/open-james-lee.jpg');
 }
@@ -127,20 +137,20 @@ article h2.open-forever{
   border-left: solid 5px #27AE60;
   box-shadow: #27AE60 1px 0 5px rgba(0, 0, 0, 0.3);
   padding: 1em;
-  
   text-align: center;
 }
 
 .emphasize h2{
   margin: 0px;
-  
 }
+
 .product{
   margin-right: 1em;
   padding: 1em;
   background: #CCCCCC;
   text-align: center;
 }
+
 .product:last-of-type{
   margin-right: 0;
 }
@@ -148,6 +158,7 @@ article h2.open-forever{
 .product span{
   display: block;
 }
+
 .product img{
   width: 100%;
   max-width: 250px;
@@ -172,10 +183,11 @@ button{
 
 .sidy-by-side{
   display: flex;
-  gap: 20px;          /* ruimte tussen de opties */
+  gap: 20px;
   justify-content: space-between;
   align-items: center;
 }
+
 .sidy-by-side > * {
   flex: 1;
   display: flex;
@@ -200,15 +212,10 @@ footer{
 .hidden-on-lg{
   display: none;
 }
+
 .hidden-on-sm{
   display: block;
 }
-
-/* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
-  Bron: https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488
-*/
 
 @media (max-width: 480px) {
   .hidden-on-lg{
@@ -218,12 +225,9 @@ footer{
     display: none
   }
 }
-/* 
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
-*/
 
 @media (max-width: 1024px) {
+
   .logo{
     margin: 0 auto;
     width: 256px;
@@ -232,15 +236,13 @@ footer{
   .row{
     flex-direction: column;
   }
+
   .sidy-by-side{
     flex-direction: column;
     align-items: center;
   }
 }
 
-/*
-  help! Het lettertype wordt om een of andere reden niet goed geladen... Misschien heeft het iets met het pad naar de fonts te maken?
-*/
 @font-face {
   font-family: 'Heartbeat';
   src: url('../fonts/heartbeat.eot');
@@ -253,33 +255,26 @@ footer{
   font-style: normal;
 }
 
-/*
-  Animations for fading in logo on page load
-*/
 @keyframes fadein {
 from { opacity: 0; }
 to   { opacity: 1; }
 }
 
-/* Firefox < 16 */
 @-moz-keyframes fadein {
 from { opacity: 0; }
 to   { opacity: 1; }
 }
 
-/* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
 from { opacity: 0; }
 to   { opacity: 1; }
 }
 
-/* Internet Explorer */
 @-ms-keyframes fadein {
 from { opacity: 0; }
 to   { opacity: 1; }
 }
 
-/* Opera < 12.1 */
 @-o-keyframes fadein {
 from { opacity: 0; }
 to   { opacity: 1; }
