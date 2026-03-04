@@ -166,11 +166,21 @@ button{
 
 .payment-option{
   height: 64px;
+  width: auto;
+  object-fit: contain;
 }
 
 .sidy-by-side{
-
-  
+  display: flex;
+  gap: 20px;          /* ruimte tussen de opties */
+  justify-content: space-between;
+  align-items: center;
+}
+.sidy-by-side > * {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .description{
