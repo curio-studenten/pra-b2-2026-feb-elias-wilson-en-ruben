@@ -166,11 +166,21 @@ button{
 
 .payment-option{
   height: 64px;
+  width: auto;
+  object-fit: contain;
 }
 
 .sidy-by-side{
-
-  
+  display: flex;
+  gap: 20px;          /* ruimte tussen de opties */
+  justify-content: space-between;
+  align-items: center;
+}
+.sidy-by-side > * {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .description{
@@ -233,11 +243,14 @@ footer{
 */
 @font-face {
   font-family: 'Heartbeat';
-  src:  url('fonts/heartbeat.eot') format('eot'),
-        url('fonts/heartbeat.otf') format('otf'),
-        url('fonts/heartbeat.woff') format('woff'),
-        url('fonts/heartbeat.svg') format('svg'),
-        url('fonts/heartbeat.ttf') format('ttf');
+  src: url('../fonts/heartbeat.eot');
+  src: url('../fonts/heartbeat.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/heartbeat.woff2') format('woff2'),
+       url('../fonts/heartbeat.woff') format('woff'),
+       url('../fonts/heartbeat.ttf') format('truetype'),
+       url('../fonts/heartbeat.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /*
