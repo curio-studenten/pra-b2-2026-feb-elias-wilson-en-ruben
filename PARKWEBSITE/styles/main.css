@@ -168,21 +168,13 @@ button{
   height: 64px;
 }
 
-.side-by-side {
+.sidy-by-side{
   display: flex;
   gap: 20px;          /* ruimte tussen de opties */
   justify-content: space-between;
 }
-
 .side-by-side > * {
-  flex: 1;            /* alle opties even breed */
-}
-
-/* Mobiel */
-@media (max-width: 600px) {
-  .side-by-side {
-    flex-direction: column;   /* onder elkaar op mobiel */
-  }
+  flex: 1; 
 }
 
 .description{
@@ -213,9 +205,13 @@ footer{
 */
 
 @media (max-width: 480px) {
-
+  .hidden-on-lg{
+    display: block
+  }
+  .hidden-on-sm{
+    display: none
+  }
 }
-
 /* 
   ##Device = Tablets, Ipads (portrait)
   ##Screen = B/w 768px to 1024px
